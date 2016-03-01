@@ -26,7 +26,7 @@ function sendCurrentUsers (socket) {
 	});
 
 	socket.emit('message', {
-		name: 'System',
+		name: 'Talkio Bot',
 		text: 'Current users: ' + users.join(', '),
 		timestamp: moment.valueOf()
 	});
@@ -53,7 +53,7 @@ io.on('connection', function (socket) {
 		clientInfo[socket.id] = req;
 		socket.join(req.room);
 		socket.broadcast.to(req.room).emit('message', {
-			name: 'System',
+			name: 'Talkio Bot',
 			text: req.name + ' has joined!',
 			timestamp: moment().valueOf()
 		});
@@ -75,8 +75,8 @@ io.on('connection', function (socket) {
 	// timestamp property - JavaScript timestamp (milliseconds)
 
 	socket.emit('message', {
-		name: 'System',
-		text: 'Welcome to the chat application!',
+		name: 'Talkio Bot',
+		text: 'Welcome to Talkio chat application!',
 		timestamp: moment().valueOf()
 	});
 });
