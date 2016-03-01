@@ -1,1 +1,1 @@
-# Talkio: Socket.io Based Chat App
+# Talkio: Chat App
